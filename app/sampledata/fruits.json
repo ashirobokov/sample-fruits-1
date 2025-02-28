@@ -1,0 +1,44 @@
+{
+  "data": [
+    {
+      "name": "Яблоня",
+      "type": "Тип : древесный",
+      "short": "TextView TextView TextView \n TextView TextView"
+    },
+    {
+      "name": "Груша",
+      "type": "Тип : древесный",
+	  "short": "TextView TextView TextView \n TextView TextView"
+	},
+    {
+      "name": "Слива",
+      "type": "Тип : кустовидный",
+	  "short": "TextView TextView TextView \n TextView TextView"
+    },
+    {
+      "name": "Черешня",
+      "type": "Тип : кустовидный",
+	  "short": "TextView TextView TextView \n TextView TextView"
+    },
+	{
+      "name": "Малина",
+      "type": "Тип : кустарниковый",
+	  "short": "TextView TextView TextView \n TextView TextView"
+    },
+    {
+      "name": "Гранат",
+      "type": "Тип : кустовидный",
+	  "short": "TextView TextView TextView \n TextView TextView"
+    },
+	{
+      "name": "Абрикос",
+      "type": "Тип : древесный",
+	  "short": "TextView TextView TextView \n TextView TextView"
+    },
+    {
+      "name": "Виноград",
+      "type": "Тип : кустарниковый",
+	  "short": "TextView TextView TextView \n TextView TextView"
+    }
+  ]
+}	

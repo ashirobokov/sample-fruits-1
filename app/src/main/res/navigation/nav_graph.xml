@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FruitListFragment">
+
+    <fragment
+        android:id="@+id/FruitListFragment"
+        android:name="ru.ashirobokov.fruits.FruitListFragment"
+        android:label="@string/fruit_list_label"
+        tools:layout="@layout/fragment_fruit_list">
+        <action
+            android:id="@+id/action_FruitListFragment_to_FruitDetailFragment"
+            app:destination="@id/FruitDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/FruitDetailFragment"
+        android:name="ru.ashirobokov.fruits.FruitDetailFragment"
+        android:label="@string/fruit_detail_label"
+        tools:layout="@layout/fragment_fruit_detail">
+        <action
+            android:id="@+id/action_FruitDetailFragment_to_FruitListFragment"
+            app:destination="@id/FruitListFragment" />
+        <argument
+            android:name="fruit"
+            app:argType="ru.ashirobokov.fruits.model.Fruit" />
+    </fragment>
+</navigation>
