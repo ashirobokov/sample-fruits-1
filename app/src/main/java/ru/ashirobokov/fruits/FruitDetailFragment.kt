@@ -1,15 +1,10 @@
 package ru.ashirobokov.fruits
 
-import android.graphics.drawable.Drawable
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.graphics.drawable.toDrawable
-import androidx.navigation.fragment.findNavController
-import com.bumptech.glide.Glide
-import com.bumptech.glide.request.RequestOptions
+import androidx.fragment.app.Fragment
 import ru.ashirobokov.fruits.databinding.FragmentFruitDetailBinding
 import ru.ashirobokov.fruits.model.Fruit
 
@@ -43,13 +38,14 @@ class FruitDetailFragment : Fragment() {
          * ImageView c обычной вставкой картинки пока получается лучше чем с Glide-ом ... :-)
          */
         binding.fruitDetailImage.setImageResource(fruit.fruitImageId)
+        binding.fruitLongText.setText(fruit.fruitLongDescription)
 
-/**
- *  Судя то документации Glide, при вставке картинки в ImageView, из layout-а
- *  наследуются такие параметры как scaleType. И если он, например, ImageView установлен в centerCrop,
- *  то Glide также будет использовать centerCrop при размещении картинки. Таким образом, не нужно
- *  специально устанавливать fitCenter() или apply(options), где в RequestOptions выбрано centerCrop.
- */
+        /**
+         *  Судя то документации Glide, при вставке картинки в ImageView, из layout-а
+         *  наследуются такие параметры как scaleType. И если он, например, ImageView установлен в centerCrop,
+         *  то Glide также будет использовать centerCrop при размещении картинки. Таким образом, не нужно
+         *  специально устанавливать fitCenter() или apply(options), где в RequestOptions выбрано centerCrop.
+         */
         /*
                 val options = RequestOptions().centerCrop()
                 Glide.with(this@FruitDetailFragment)
@@ -59,11 +55,11 @@ class FruitDetailFragment : Fragment() {
                     .into(binding.fruitDetailImage)
         */
 
-/*
-        binding.buttonSecond.setOnClickListener {
-            findNavController().navigate(FruitDetailFragmentDirections.actionFruitDetailFragmentToFruitListFragment())
-        }
-*/
+        /*
+                binding.buttonSecond.setOnClickListener {
+                    findNavController().navigate(FruitDetailFragmentDirections.actionFruitDetailFragmentToFruitListFragment())
+                }
+        */
     }
 
     override fun onDestroyView() {
