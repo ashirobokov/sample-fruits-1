@@ -40,7 +40,7 @@ class FruitDetailFragment : Fragment() {
         /**
          * ImageView c обычной вставкой картинки пока получается лучше чем с Glide-ом ... :-)
          */
-        binding.fruitDetailImage.setImageResource(fruit.fruitImageId)
+//        binding.fruitDetailImage.setImageResource(fruit.fruitImageId)
 //        binding.fruitLongText.setText(fruit.fruitLongDescription)
 
         /**
