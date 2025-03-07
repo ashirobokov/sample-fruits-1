@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id 'kotlin-parcelize'
     alias(libs.plugins.androidx.navigation.safe.args)
+    alias(libs.plugins.kotlin.kapt)
 }
 
 android {
@@ -34,6 +35,7 @@ android {
     }
     buildFeatures {
         viewBinding true
+        dataBinding true
     }
 }
 

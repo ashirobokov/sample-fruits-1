@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import ru.ashirobokov.fruits.databinding.FragmentFruitDetailBinding
 import ru.ashirobokov.fruits.model.Fruit
 
+
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
@@ -34,11 +35,13 @@ class FruitDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.fruit = fruit
+
         /**
          * ImageView c обычной вставкой картинки пока получается лучше чем с Glide-ом ... :-)
          */
         binding.fruitDetailImage.setImageResource(fruit.fruitImageId)
-        binding.fruitLongText.setText(fruit.fruitLongDescription)
+//        binding.fruitLongText.setText(fruit.fruitLongDescription)
 
         /**
          *  Судя то документации Glide, при вставке картинки в ImageView, из layout-а
@@ -66,4 +69,5 @@ class FruitDetailFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
 }
